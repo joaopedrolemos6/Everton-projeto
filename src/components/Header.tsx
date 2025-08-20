@@ -55,7 +55,7 @@ const Header = () => {
                 EVERTON SOUSA
               </span>
               <div className={`text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${isLightBg ? 'text-slate-600' : 'text-white/80'}`}>
-                CONTADOR
+                CONTABILIDADE
               </div>
             </div>
           </Link>
