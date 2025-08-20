@@ -67,7 +67,7 @@ const Team = () => {
               <Calculator className="w-12 h-12 text-white/60 mb-6" />
               <h3 className="text-2xl font-light mb-4">TRADIÇÃO</h3>
               <p className="text-white/80 leading-relaxed">
-                Mais de 25 anos de atuação no mercado contábil brasileiro, 
+                Mais de 10 anos de atuação no mercado contábil brasileiro, 
                 construindo um legado de excelência e confiança.
               </p>
             </div>
