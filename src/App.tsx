@@ -6,7 +6,7 @@ import HomePage from './components/HomePage';
 import MedicalPage from './components/MedicalPage';
 import BlogPage from './components/BlogPage';
 import SinglePostPage from './components/SinglePostPage';
-import WhatsAppButton from './components/WhatsAppButton';
+import WhatsAppButton from './components/WhatsappButton';
 import LoginPage from './components/LoginPage';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
