@@ -8,8 +8,8 @@ const Team = () => {
     {
       name: 'Contador Everton Sousa',
       position: 'Sócio Fundador',
-      specialization: 'Contabilidade Empresarial e Tributária',
-      education: 'MBA FGV, ',
+      specialization: 'Especialista Contabilidade Empresarial e Tributaria Contabilidade para Área da Saúde
+      education: 'CRC: PB-013847/O-6 ',
       experience: '10 anos de experiência',
       image: profilePhoto 
     },
