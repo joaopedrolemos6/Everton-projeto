@@ -6,11 +6,11 @@ import profilePhoto from '../assets/images/foto.png';
 const Team = () => {
   const partners = [
     {
-      name: 'Contador Eduardo Mendes Silva',
+      name: 'Contador Everton Sousa',
       position: 'Sócio Fundador',
       specialization: 'Contabilidade Empresarial e Tributária',
-      education: 'MBA FGV, Especialização USP',
-      experience: '28 anos de experiência',
+      education: 'MBA FGV, ',
+      experience: '10 anos de experiência',
       image: profilePhoto 
     },
   ];
