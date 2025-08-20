@@ -21,7 +21,16 @@ const Team = () => {
     <section id="team" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* O bloco de título que estava aqui foi removido */}
+        {/* Bloco de título re-adicionado, sem o parágrafo de descrição */}
+        <div className="text-center mb-20">
+          <span className="text-sm font-medium tracking-[0.2em] text-slate-500 uppercase">
+            LIDERANÇA CONTÁBIL
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mt-4 mb-8 leading-tight">
+            Fundador
+          </h2>
+          {/* O parágrafo de descrição que estava aqui foi removido. */}
+        </div>
 
         <div className="flex justify-center mb-20">
           <div className="group lg:w-1/3 md:w-1/2 w-full">
