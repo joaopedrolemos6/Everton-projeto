@@ -4,43 +4,26 @@ import { Award, BookOpen, Calculator } from 'lucide-react';
 import profilePhoto from '../assets/images/foto.png';
 
 const Team = () => {
-  // Array agora com um único sócio
   const partners = [
     {
-      name: 'Everton Sousa Contador',
-      specialization: 'Especialista Contabilidade Empresarial e Tributaria Contabilidade para Área da Saúde',
-      education: 'CRC: PB-013847/O-6',
-      experience: '10 anos de experiência',
+      name: 'Contador Eduardo Mendes Silva',
+      position: 'Sócio Fundador',
+      specialization: 'Contabilidade Empresarial e Tributária',
+      education: 'MBA FGV, Especialização USP',
+      experience: '28 anos de experiência',
       image: profilePhoto 
     },
   ];
 
-  // Para simplificar, pegamos o único sócio do array
   const singlePartner = partners[0];
 
   return (
     <section id="team" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <span className="text-sm font-medium tracking-[0.2em] text-slate-500 uppercase">
-            LIDERANÇA CONTÁBIL
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mt-4 mb-8 leading-tight">
-            
-            <span className="block font-normal">Fundador</span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Profissional de reconhecida excelência técnica e vasta experiência 
-            em sua área de especialização contábil.
-          </p>
-        </div>
+        
+        {/* O bloco de título que estava aqui foi removido */}
 
-        {/* ===== ALTERAÇÃO PRINCIPAL AQUI ===== */}
-        {/* Trocamos 'grid' por 'flex' e adicionamos 'justify-center' para centralizar */}
         <div className="flex justify-center mb-20">
-          {/* Removemos o .map() e renderizamos o card diretamente.
-            Adicionamos classes de largura para o card não ficar muito estreito em telas grandes.
-          */}
           <div className="group lg:w-1/3 md:w-1/2 w-full">
             <div className="aspect-w-3 aspect-h-4 mb-8 overflow-hidden rounded-sm">
               <img
@@ -54,6 +37,9 @@ const Team = () => {
               <h3 className="text-xl font-medium text-slate-900 mb-2">
                 {singlePartner.name}
               </h3>
+              <p className="text-sm font-medium text-slate-500 tracking-[0.1em] uppercase mb-4">
+                {singlePartner.position}
+              </p>
               <p className="text-slate-600 mb-3">
                 <strong>Especialização:</strong> {singlePartner.specialization}
               </p>
@@ -66,8 +52,6 @@ const Team = () => {
             </div>
           </div>
         </div>
-        {/* ===== FIM DA ALTERAÇÃO ===== */}
-
 
         <div className="bg-slate-900 rounded-sm p-16 text-white">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
@@ -75,7 +59,7 @@ const Team = () => {
               <Calculator className="w-12 h-12 text-white/60 mb-6" />
               <h3 className="text-2xl font-light mb-4">TRADIÇÃO</h3>
               <p className="text-white/80 leading-relaxed">
-                Mais de 10 anos de atuação no mercado contábil brasileiro, 
+                Mais de 25 anos de atuação no mercado contábil brasileiro, 
                 construindo um legado de excelência e confiança.
               </p>
             </div>
