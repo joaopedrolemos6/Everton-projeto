@@ -34,7 +34,6 @@ const Header = () => {
   const navLinks = [
     { label: 'EMPRESA', id: 'about' },
     { label: 'SERVIÇOS', id: 'services' },
-    { label: 'EQUIPE', id: 'team' },
     { label: 'CONTATO', id: 'contact' }
   ];
 

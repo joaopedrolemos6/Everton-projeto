@@ -8,7 +8,8 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
-import { API_URL } from '../apiConfig'; // Garanta que este import está correto
+import { FaWhatsapp } from 'react-icons/fa'; // 1. Importe o ícone do WhatsApp
+import { API_URL } from '../apiConfig';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,10 @@ const Contact = () => {
 
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
+
+  // 2. Defina a URL do WhatsApp
+  const whatsappNumber = '5583987351040';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá!%20Vi%20o%20contato%20no%20site.`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -55,7 +60,7 @@ const Contact = () => {
       setFormData({ name: '', company: '', email: '', phone: '', subject: '', message: '' });
 
     } catch (err: any) {
-      console.error("Erro no handleSubmit:", err); // Este console.log ajuda a depurar erros
+      console.error("Erro no handleSubmit:", err);
       setStatus('error');
       setStatusMessage(err.message);
     }
@@ -68,7 +73,7 @@ const Contact = () => {
       details: [
         'Rua José Gonçalves de Lucena, 524',
         'Cruzeiro, Campina Grande - PB',
-        'CEP: 58415-000'
+        'CEP: 58415-375'
       ]
     },
     {
@@ -114,6 +119,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+          {/* Contact Information */}
           <div className="lg:col-span-2 space-y-12">
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-start space-x-6">
@@ -126,12 +132,26 @@ const Contact = () => {
                 </div>
               </div>
             ))}
+            
+            {/* 3. Botão de WhatsApp adicionado aqui */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-green-500 text-white px-8 py-3 rounded-sm font-medium hover:bg-green-600 transition-all duration-300 flex items-center justify-center space-x-3"
+            >
+              <FaWhatsapp className="w-5 h-5" />
+              <span>FALAR NO WHATSAPP</span>
+            </a>
+
           </div>
 
+          {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="bg-slate-50 rounded-sm p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 {/* ... (código dos inputs do formulário) ... */}
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">NOME COMPLETO *</label>
                         <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="Seu nome completo" />

@@ -7,8 +7,7 @@ const Team = () => {
   // Array agora com um único sócio
   const partners = [
     {
-      name: 'Contador Everton Sousa',
-      position: 'Sócio Fundador',
+      name: 'Everton Sousa Contador',
       specialization: 'Especialista Contabilidade Empresarial e Tributaria Contabilidade para Área da Saúde',
       education: 'CRC: PB-013847/O-6',
       experience: '10 anos de experiência',
@@ -27,7 +26,7 @@ const Team = () => {
             LIDERANÇA CONTÁBIL
           </span>
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mt-4 mb-8 leading-tight">
-            Sócio
+            
             <span className="block font-normal">Fundador</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -55,9 +54,6 @@ const Team = () => {
               <h3 className="text-xl font-medium text-slate-900 mb-2">
                 {singlePartner.name}
               </h3>
-              <p className="text-sm font-medium text-slate-500 tracking-[0.1em] uppercase mb-4">
-                {singlePartner.position}
-              </p>
               <p className="text-slate-600 mb-3">
                 <strong>Especialização:</strong> {singlePartner.specialization}
               </p>
@@ -79,7 +75,7 @@ const Team = () => {
               <Calculator className="w-12 h-12 text-white/60 mb-6" />
               <h3 className="text-2xl font-light mb-4">TRADIÇÃO</h3>
               <p className="text-white/80 leading-relaxed">
-                Mais de 25 anos de atuação no mercado contábil brasileiro, 
+                Mais de 10 anos de atuação no mercado contábil brasileiro, 
                 construindo um legado de excelência e confiança.
               </p>
             </div>
