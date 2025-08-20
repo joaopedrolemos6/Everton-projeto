@@ -4,12 +4,11 @@ import { Award, BookOpen, Calculator } from 'lucide-react';
 import profilePhoto from '../assets/images/foto.png';
 
 const Team = () => {
-  const partners = [
+ const partners = [
     {
-      name: 'Contador Everton Sousa',
-      position: 'Sócio Fundador',
-      specialization: 'Especialista Contabilidade Empresarial e Tributaria Contabilidade para Área da Saúde
-      education: 'CRC: PB-013847/O-6 ',
+      name: 'Everton Sousa Contador',
+      specialization: 'Especialista Contabilidade Empresarial e Tributaria Contabilidade para Área da Saúde',
+      education: 'CRC: PB-013847/O-6',
       experience: '10 anos de experiência',
       image: profilePhoto 
     },
