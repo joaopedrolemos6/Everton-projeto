@@ -40,7 +40,7 @@ const Footer = () => {
               <div>
                 <span className="text-xl font-light tracking-wide">EVERTON SOUSA</span>
                 <div className="text-xs font-medium tracking-[0.2em] uppercase text-white/70">
-                  CONTADOR
+                  CONTABILIDADE
                 </div>
               </div>
             </div>
