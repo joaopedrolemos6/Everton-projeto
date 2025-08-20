@@ -1,56 +1,87 @@
 import React from 'react';
 import { 
-  Calculator, 
-  Building, 
-  FileText, 
-  Shield,
-  TrendingUp,
-  PieChart
+  FileCheck,      // Ícone para Legalização
+  Users,          // Ícone para Departamento Pessoal
+  Receipt,        // Ícone para Fiscal e Tributário
+  BookOpen,       // Ícone para Contabilidade
+  TrendingUp,     // Ícone para Gestão Financeira
+  Lightbulb       // Ícone para Consultoria
 } from 'lucide-react';
 
 const Services = () => {
+  // A estrutura de dados foi mantida, apenas o conteúdo foi substituído.
   const services = [
     {
-      icon: <Building className="w-10 h-10" />,
-      title: 'CONTABILIDADE EMPRESARIAL',
-      subtitle: 'Gestão Corporativa',
-      description: 'Assessoria contábil integral para grandes corporações, incluindo consolidações, reestruturações e compliance fiscal.',
-      features: ['Consolidação de Balanços', 'Governança Fiscal', 'Compliance Tributário', 'Relatórios Gerenciais']
+      icon: <FileCheck className="w-10 h-10" />,
+      title: 'LEGALIZAÇÃO E REGULARIZAÇÃO',
+      subtitle: 'Conformidade e Processos',
+      description: 'Garantimos a conformidade legal da sua empresa desde a abertura até a gestão contínua de alvarás e certidões.',
+      features: [
+        'Abertura, alteração e encerramento', 
+        'Alterações contratuais e cadastrais', 
+        'Regularização fiscal e trabalhista', 
+        'Obtenção de alvarás e licenças'
+      ]
     },
     {
-      icon: <FileText className="w-10 h-10" />,
-      title: 'CONSULTORIA TRIBUTÁRIA',
-      subtitle: 'Planejamento Fiscal',
-      description: 'Consultoria especializada em questões tributárias complexas, com estratégia personalizada para cada cliente.',
-      features: ['Planejamento Tributário', 'Consultoria Fiscal', 'Transfer Pricing', 'Reorganizações Societárias']
+      icon: <Users className="w-10 h-10" />,
+      title: 'DEPARTAMENTO PESSOAL',
+      subtitle: 'Gestão de Capital Humano',
+      description: 'Cuidamos de toda a rotina de pessoal, desde a admissão até o cumprimento de todas as obrigações legais.',
+      features: [
+        'Admissão e demissão de funcionários', 
+        'Cálculo de folha de pagamento', 
+        'Geração de guias (FGTS, INSS, IRRF)', 
+        'Elaboração e envio do eSocial'
+      ]
     },
     {
-      icon: <Shield className="w-10 h-10" />,
-      title: 'AUDITORIA INDEPENDENTE',
-      subtitle: 'Certificação Contábil',
-      description: 'Auditoria independente de alto nível para demonstrações financeiras e processos internos.',
-      features: ['Auditoria Externa', 'Due Diligence', 'Auditoria Interna', 'Certificação SOX']
+      icon: <Receipt className="w-10 h-10" />,
+      title: 'FISCAL E TRIBUTÁRIO',
+      subtitle: 'Otimização de Impostos',
+      description: 'Realizamos a apuração de impostos e o planejamento tributário para reduzir legalmente a carga fiscal da sua empresa.',
+      features: [
+        'Apuração de impostos (todos regimes)', 
+        'Controle de guias e parcelamentos', 
+        'Planejamento tributário estratégico', 
+        'Envio de obrigações (SPED, ECF)'
+      ]
+    },
+    {
+      icon: <BookOpen className="w-10 h-10" />,
+      title: 'CONTABILIDADE',
+      subtitle: 'Relatórios e Demonstrativos',
+      description: 'Fornecemos uma visão clara da saúde financeira do seu negócio através de relatórios e demonstrativos precisos.',
+      features: [
+        'Escrituração contábil completa', 
+        'Apuração de resultados (DRE, Balanço)', 
+        'Relatórios gerenciais personalizados', 
+        'Classificação e conciliação'
+      ]
     },
     {
       icon: <TrendingUp className="w-10 h-10" />,
-      title: 'CONTROLADORIA',
-      subtitle: 'Gestão Financeira',
-      description: 'Estruturação de controladoria e gestão financeira para empresas de grande porte.',
-      features: ['Controles Internos', 'Orçamento Empresarial', 'Análise de Custos', 'KPIs Financeiros']
+      title: 'GESTÃO FINANCEIRA',
+      subtitle: 'Controle e Planejamento',
+      description: 'Auxiliamos no controle financeiro, desde o fluxo de caixa diário até o planejamento orçamentário estratégico.',
+      features: [
+        'Contas a pagar e receber', 
+        'Conciliação bancária', 
+        'Fluxo de caixa e dashboards', 
+        'Diagnóstico da saúde financeira'
+      ]
     },
     {
-      icon: <PieChart className="w-10 h-10" />,
-      title: 'GESTÃO PATRIMONIAL',
-      subtitle: 'Planejamento Sucessório',
-      description: 'Estruturação contábil e tributária para famílias e indivíduos de alto patrimônio.',
-      features: ['Sucessão Empresarial', 'Holdings Familiares', 'Planejamento Sucessório', 'Family Office']
-    },
-    {
-      icon: <Calculator className="w-10 h-10" />,
-      title: 'CONTABILIDADE INTERNACIONAL',
-      subtitle: 'Normas Globais',
-      description: 'Assessoria em normas contábeis internacionais, IFRS e operações multinacionais.',
-      features: ['Conversão IFRS', 'Consolidação Global', 'Transfer Pricing', 'Compliance Internacional']
+      icon: <Lightbulb className="w-10 h-10" />,
+      title: 'CONSULTORIA ESTRATÉGICA',
+      subtitle: 'Suporte para Decisões',
+      description: 'Oferecemos assessoria personalizada para apoiar o crescimento e a viabilidade do seu negócio.',
+      features: [
+        'Análise de viabilidade de negócios', 
+        'Planejamento societário', 
+        'Análise de custos e preços', 
+        'Acompanhamento de metas'
+      ]
     }
   ];
 
@@ -66,8 +97,8 @@ const Services = () => {
             <span className="block font-normal">de Excelência</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Oferecemos assessoria contábil especializada nas mais diversas áreas da contabilidade, 
-            sempre com foco na estratégia e nos resultados excepcionais.
+            Oferecemos um portfólio completo de serviços para garantir a saúde fiscal, 
+            financeira e legal da sua empresa, com a máxima eficiência e precisão.
           </p>
         </div>
 

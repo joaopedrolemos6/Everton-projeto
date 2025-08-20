@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Elegant badge */}
           <div className="inline-flex items-center px-6 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-12">
             <span className="text-white/90 text-sm font-medium tracking-wide">
-              EXCELÊNCIA CONTÁBIL DESDE 1998
+              EXCELÊNCIA CONTÁBIL DESDE 2015
             </span>
           </div>
 

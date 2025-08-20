@@ -21,8 +21,8 @@ const About = () => {
   ];
 
   const achievements = [
-    { number: '25+', label: 'ANOS DE TRADIÇÃO' },
-    { number: '500+', label: 'EMPRESAS ATENDIDAS' },
+    { number: '10+', label: 'ANOS DE TRADIÇÃO' },
+    { number: '50+', label: 'EMPRESAS ATENDIDAS' },
     { number: '99%', label: 'SATISFAÇÃO DOS CLIENTES' },
     { number: '24H', label: 'SUPORTE FISCAL' }
   ];
@@ -44,7 +44,7 @@ const About = () => {
             </div>
             
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Há mais de duas décadas, nossa empresa representa o que há de mais refinado 
+               Nossa empresa representa o que há de mais refinado 
               na contabilidade brasileira, combinando tradição familiar, expertise técnica e 
               uma abordagem estratégica única para cada cliente.
             </p>
@@ -103,7 +103,7 @@ const About = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <Award className="w-5 h-5 text-white/60" />
-                  <span className="text-white/90">CRC/SP - Certificação de Excelência</span>
+                  <span className="text-white/90">CRC/PB - Certificação de Excelência</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Award className="w-5 h-5 text-white/60" />
