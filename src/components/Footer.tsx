@@ -38,9 +38,9 @@ const Footer = () => {
                 <Calculator className="w-8 h-8 text-white" />
               </div>
               <div>
-                <span className="text-xl font-light tracking-wide">EVERTON SOUSA</span>
+                <span className="text-xl font-light tracking-wide">CONTADOR</span>
                 <div className="text-xs font-medium tracking-[0.2em] uppercase text-white/70">
-                  CONTABILIDADE
+                  EVERTON SOUSA
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="text-center lg:text-left mb-6 lg:mb-0">
               <p className="text-white/50 text-sm mb-2">
-                © 2025 Everton Sousa Contador. Todos os direitos reservados.
+                © 2025 Contador Everton Sousa. Todos os direitos reservados.
               </p>
               <p className="text-white/40 text-xs">
                 CRC/SP 123.456 | CNPJ: 12.345.678/0001-90
