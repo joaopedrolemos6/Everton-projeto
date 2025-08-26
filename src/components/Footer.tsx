@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 mb-8 leading-relaxed max-w-md">
-              Excelência contábil, oferecendo soluções estratégicas e personalizadas para o seu negócio.
+              Excelência contábil, oferecendo soluções estratégicas e personalizadas para o seu negócio.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
@@ -70,15 +70,12 @@ const Footer = () => {
               <li>
                 <button onClick={() => scrollToSection('hero')} className="text-white/70 hover:text-white transition-colors duration-300">Início</button>
               </li>
-              <li>
-                <button onClick={() => scrollToSection('about')} className="text-white/70 hover:text-white transition-colors duration-300">Empresa</button>
-              </li>
+              {/* O link "Empresa" foi removido daqui */}
               <li>
                 <button onClick={() => scrollToSection('services')} className="text-white/70 hover:text-white transition-colors duration-300">Serviços</button>
               </li>
-              {/* Links diretos para as novas páginas */}
               <li>
-                <Link to="/contabilidade-medica" className="text-white/70 hover:text-white transition-colors duration-300">Contabilidade Médica</Link>
+                <button onClick={() => scrollToSection('team')} className="text-white/70 hover:text-white transition-colors duration-300">Equipe</button>
               </li>
               <li>
                 <Link to="/blog" className="text-white/70 hover:text-white transition-colors duration-300">Blog</Link>
@@ -120,7 +117,7 @@ const Footer = () => {
                 © 2025 Contador Everton Sousa. Todos os direitos reservados.
               </p>
               <p className="text-white/40 text-xs">
-                CRC/SP 123.456 | CNPJ: 12.345.678/0001-90
+                CRC/PB 012345/O-0 | CNPJ: 12.345.678/0001-90
               </p>
             </div>
             
