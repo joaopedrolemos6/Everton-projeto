@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Calculator } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext'; // Importar o hook de autenticação
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const { isAuthenticated } = useAuth(); // Pegar o status de autenticação
-
+  const { isAuthenticated } = useAuth();
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -31,8 +31,8 @@ const Header = () => {
   
   const isLightBg = isScrolled || location.pathname !== '/';
 
+  // O link "EMPRESA" foi removido deste array
   const navLinks = [
-    { label: 'EMPRESA', id: 'about' },
     { label: 'SERVIÇOS', id: 'services' },
     { label: 'CONTATO', id: 'contact' }
   ];
@@ -66,15 +66,7 @@ const Header = () => {
             {navLinks.map((item) => (
               <button key={item.id} onClick={() => scrollToSection(item.id)} className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${isLightBg ? 'text-slate-700' : 'text-white'}`}>{item.label}</button>
             ))}
-            <Link to="/contabilidade-medica" className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${isLightBg ? 'text-slate-700' : 'text-white'}`}>CONTABILIDADE MÉDICA</Link>
             <Link to="/blog" className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${isLightBg ? 'text-slate-700' : 'text-white'}`}>BLOG</Link>
-            
-            {/* Link Condicional */}
-            {isAuthenticated ? (
-              <Link to="/admin" className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${isLightBg ? 'text-indigo-600' : 'text-white'}`}>ADMIN</Link>
-            ) : (
-              <Link to="/login" className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${isLightBg ? 'text-slate-700' : 'text-white'}`}>LOGIN</Link>
-            )}
           </div>
 
           {/* Mobile menu button */}
@@ -93,15 +85,7 @@ const Header = () => {
                 {navLinks.map((item) => (
                     <button key={item.id} onClick={() => scrollToSection(item.id)} className="block text-left w-full text-sm font-medium tracking-wide text-slate-700 hover:text-slate-900 transition-colors duration-300">{item.label}</button>
                 ))}
-                <Link to="/contabilidade-medica" onClick={() => setIsMenuOpen(false)} className="block text-sm font-medium tracking-wide text-slate-700 hover:text-slate-900 transition-colors duration-300">CONTABILIDADE MÉDICA</Link>
                 <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="block text-sm font-medium tracking-wide text-slate-700 hover:text-slate-900 transition-colors duration-300">BLOG</Link>
-
-                {/* Link Condicional Mobile */}
-                {isAuthenticated ? (
-                  <Link to="/admin" onClick={() => setIsMenuOpen(false)} className="block text-sm font-medium tracking-wide text-indigo-600 hover:text-indigo-800 transition-colors duration-300">ADMIN</Link>
-                ) : (
-                  <Link to="/login" onClick={() => setIsMenuOpen(false)} className="block text-sm font-medium tracking-wide text-slate-700 hover:text-slate-900 transition-colors duration-300">LOGIN</Link>
-                )}
             </div>
           </div>
         )}
