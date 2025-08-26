@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
-import Services from './Services';
-import About from './About';
+import MedicalServices from './MedicalServices'; 
+// A linha 'import About from './About';' foi removida daqui
 import Team from './Team';
 import Contact from './Contact';
 
@@ -9,8 +9,8 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <Services />
-      <About />
+      <MedicalServices /> 
+      {/* A linha '<About />' foi removida daqui */}
       <Team />
       <Contact />
     </>
