@@ -63,14 +63,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* ===== NAVEGAÇÃO ATUALIZADA ===== */}
+          {/* Navegação */}
           <div>
             <h3 className="text-lg font-medium mb-8 tracking-wide">NAVEGAÇÃO</h3>
             <ul className="space-y-4">
               <li>
                 <button onClick={() => scrollToSection('hero')} className="text-white/70 hover:text-white transition-colors duration-300">Início</button>
               </li>
-              {/* O link "Empresa" foi removido daqui */}
               <li>
                 <button onClick={() => scrollToSection('services')} className="text-white/70 hover:text-white transition-colors duration-300">Serviços</button>
               </li>
@@ -85,18 +84,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {/* ===== FIM DA ATUALIZAÇÃO ===== */}
 
-          {/* Serviços */}
+          {/* ===== LISTA DE SERVIÇOS ATUALIZADA ===== */}
           <div>
             <h3 className="text-lg font-medium mb-8 tracking-wide">SERVIÇOS</h3>
             <ul className="space-y-4">
               {[
-                'Legalização e Regularização',
-                'Departamento Pessoal',
-                'Fiscal e Tributário',
-                'Contabilidade',
-                'Gestão Financeira',
+                'Abertura de PJ Médica',
+                'Planejamento Tributário',
+                'Gestão Fiscal e Contábil',
+                'DMED e Carnê-Leão',
+                'BPO Financeiro',
                 'Consultoria Estratégica'
               ].map((specialty) => (
                 <li key={specialty}>
@@ -107,6 +105,8 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+          {/* ===== FIM DA ATUALIZAÇÃO ===== */}
+
         </div>
 
         {/* Bottom Bar */}
