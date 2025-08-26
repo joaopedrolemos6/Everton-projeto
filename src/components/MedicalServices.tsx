@@ -12,7 +12,7 @@ const MedicalServices = () => {
   const medicalServicesData = [
     {
       icon: <Stethoscope className="w-10 h-10" />,
-      title: 'ABERTURA DE PJ MÉDICA',
+      title: 'ABERTURA DE PJ MÉDICO',
       subtitle: 'Estruturação Societária',
       description: 'Cuidamos de todo o processo de abertura da sua empresa médica, garantindo o melhor enquadramento jurídico e tributário.',
       features: [
@@ -48,7 +48,7 @@ const MedicalServices = () => {
     },
     {
       icon: <FileText className="w-10 h-10" />,
-      title: 'DMED E CARNÊ-LEÃO',
+      title: 'Receita Saúde E CARNÊ-LEÃO',
       subtitle: 'Declarações Obrigatórias',
       description: 'Assessoria completa para o preenchimento e entrega de declarações essenciais para profissionais da saúde.',
       features: [
@@ -66,7 +66,7 @@ const MedicalServices = () => {
       features: [
         'Contas a pagar e receber',
         'Conciliação bancária',
-        'Gestão de glosas',
+        'Emissão de notas fiscais',
         'Relatórios de fluxo de caixa'
       ]
     },
