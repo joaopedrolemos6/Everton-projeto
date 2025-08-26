@@ -5,7 +5,7 @@ import {
   ShieldCheck,    // Ícone para Gestão de Impostos
   FileText,       // Ícone para DMED e Carnê-Leão
   Wallet,         // Ícone para BPO Financeiro
-  Landmark        // Ícone para Holding Patrimonial
+  Lightbulb       // Ícone para Consultoria (substituindo Landmark)
 } from 'lucide-react';
 
 const MedicalServices = () => {
@@ -71,22 +71,23 @@ const MedicalServices = () => {
       ]
     },
     {
-      icon: <Landmark className="w-10 h-10" />,
-      title: 'HOLDING PATRIMONIAL',
-      subtitle: 'Proteção de Bens',
-      description: 'Estruturamos uma holding para proteger seu patrimônio pessoal e otimizar a sucessão de bens.',
+      // A seção 'HOLDING PATRIMONIAL' foi substituída por esta
+      icon: <Lightbulb className="w-10 h-10" />,
+      title: 'CONSULTORIA ESTRATÉGICA',
+      subtitle: 'Suporte para Decisões',
+      description: 'Oferecemos assessoria personalizada para apoiar o crescimento e a viabilidade do seu negócio na área da saúde.',
       features: [
-        'Blindagem patrimonial',
-        'Planejamento sucessório',
-        'Redução de carga tributária',
-        'Organização de ativos'
+        'Análise de viabilidade',
+        'Planejamento societário',
+        'Análise de custos e preços',
+        'Acompanhamento de metas'
       ]
     }
   ];
 
   return (
-    // Adicionamos o id "medical-services" para a navegação funcionar
-    <section id="medical-services" className="py-24 bg-white">
+    // Renomeei o id para 'services' para que o link de navegação "Serviços" funcione corretamente
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <span className="text-sm font-medium tracking-[0.2em] text-slate-500 uppercase">
