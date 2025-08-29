@@ -39,7 +39,8 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-xl font-light tracking-wide">EVERTON SOUSA</span>
-                <div className="text-xs font-medium tracking-[0.2em] uppercase text-white/70">
+                {/* ===== VALOR DO TRACKING AUMENTADO AQUI ===== */}
+                <div className="text-xs font-medium tracking-[0.52em] uppercase text-white/70">
                   CONTABILIDADE
                 </div>
               </div>
@@ -72,9 +73,6 @@ const Footer = () => {
               </li>
               <li>
                 <button onClick={() => scrollToSection('services')} className="text-white/70 hover:text-white transition-colors duration-300">Serviços</button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('team')} className="text-white/70 hover:text-white transition-colors duration-300">Equipe</button>
               </li>
               <li>
                 <Link to="/blog" className="text-white/70 hover:text-white transition-colors duration-300">Blog</Link>
