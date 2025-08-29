@@ -43,15 +43,16 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           
-          <Link to="/" className="flex items-center space-x-4 cursor-pointer">
-            <div className="w-12 h-12 flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-5 cursor-pointer"> {/* Espaçamento aumentado para space-x-5 */}
+            {/* ===== TAMANHO DO LOGO ALTERADO AQUI ===== */}
+            <div className="w-16 h-16 flex items-center justify-center"> {/* Aumentado de w-12 h-12 para w-16 h-16 */}
               <img src="/logo.png" alt="Logo Everton Sousa Contabilidade" className="h-full w-auto object-contain" />
             </div>
+            
             <div>
               <span className={`text-xl font-light tracking-wide transition-colors duration-300 ${isLightBg ? 'text-slate-900' : 'text-white'}`}>
                 EVERTON SOUSA
               </span>
-              {/* ===== VALOR DO TRACKING AUMENTADO AQUI ===== */}
               <div className={`text-xs font-medium tracking-[0.52em] uppercase transition-colors duration-300 ${isLightBg ? 'text-slate-600' : 'text-white/80'}`}>
                 CONTABILIDADE
               </div>
