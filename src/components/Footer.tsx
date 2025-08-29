@@ -38,9 +38,9 @@ const Footer = () => {
                 <img src="/logo.png" alt="Logo Everton Sousa Contador" className="w-8 h-8 object-contain" />
               </div>
               <div>
-                <span className="text-xl font-light tracking-wide">CONTADOR</span>
+                <span className="text-xl font-light tracking-wide">EVERTON SOUSA</span>
                 <div className="text-xs font-medium tracking-[0.2em] uppercase text-white/70">
-                  EVERTON SOUSA
+                  CONTABILIDADE
                 </div>
               </div>
             </div>
