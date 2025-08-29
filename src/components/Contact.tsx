@@ -8,7 +8,7 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa'; // 1. Importe o ícone do WhatsApp
+import { FaWhatsapp } from 'react-icons/fa';
 import { API_URL } from '../apiConfig';
 
 const Contact = () => {
@@ -17,6 +17,9 @@ const Contact = () => {
     company: '',
     email: '',
     phone: '',
+    entityType: '',
+    specialty: '',
+    monthlyBilling: '',
     subject: '',
     message: ''
   });
@@ -24,7 +27,6 @@ const Contact = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
 
-  // 2. Defina a URL do WhatsApp
   const whatsappNumber = '5583987351040';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá!%20Vi%20o%20contato%20no%20site.`;
 
@@ -57,7 +59,11 @@ const Contact = () => {
       
       setStatus('success');
       setStatusMessage(data.message || 'Mensagem enviada com sucesso!');
-      setFormData({ name: '', company: '', email: '', phone: '', subject: '', message: '' });
+      setFormData({ 
+        name: '', company: '', email: '', phone: '', 
+        entityType: '', specialty: '', monthlyBilling: '', 
+        subject: '', message: '' 
+      });
 
     } catch (err: any) {
       console.error("Erro no handleSubmit:", err);
@@ -73,7 +79,7 @@ const Contact = () => {
       details: [
         'Rua José Gonçalves de Lucena, 524',
         'Cruzeiro, Campina Grande - PB',
-        'CEP: 58415-375'
+        'CEP: 58415-000'
       ]
     },
     {
@@ -119,7 +125,6 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
-          {/* Contact Information */}
           <div className="lg:col-span-2 space-y-12">
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-start space-x-6">
@@ -133,25 +138,21 @@ const Contact = () => {
               </div>
             ))}
             
-            {/* 3. Botão de WhatsApp adicionado aqui */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-green-500 text-white px-8 py-3 rounded-sm font-medium hover:bg-green-600 transition-all duration-300 flex items-center justify-center space-x-3"
+              className="w-full bg-green-500 text-white px-8 py-3 rounded-full font-medium hover:bg-green-600 transition-all duration-300 flex items-center justify-center space-x-3"
             >
               <FaWhatsapp className="w-5 h-5" />
               <span>FALAR NO WHATSAPP</span>
             </a>
-
           </div>
 
-          {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="bg-slate-50 rounded-sm p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
-                 {/* ... (código dos inputs do formulário) ... */}
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">NOME COMPLETO *</label>
                         <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="Seu nome completo" />
@@ -171,38 +172,68 @@ const Contact = () => {
                         <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="(83) 99999-9999" />
                     </div>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <label htmlFor="entityType" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">VOCÊ ATUA COMO *</label>
+                      <select id="entityType" name="entityType" value={formData.entityType} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white">
+                          <option value="" disabled>Selecione uma opção</option>
+                          <option value="Pessoa Física">Pessoa Física</option>
+                          <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="specialty" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">ESPECIALIDADE NA SAÚDE *</label>
+                      <input type="text" id="specialty" name="specialty" value={formData.specialty} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="Ex: Médico, Dentista, Clínica..."/>
+                    </div>
+                </div>
+                <div>
+                  <label htmlFor="monthlyBilling" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">FATURAMENTO MÉDIO MENSAL *</label>
+                  <select id="monthlyBilling" name="monthlyBilling" value={formData.monthlyBilling} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white">
+                      <option value="" disabled>Selecione uma faixa de faturamento</option>
+                      <option value="Até R$ 10.000">Até R$ 10.000</option>
+                      <option value="De R$ 10.001 a R$ 20.000">De R$ 10.001 a R$ 20.000</option>
+                      <option value="De R$ 20.001 a R$ 50.000">De R$ 20.001 a R$ 50.000</option>
+                      <option value="De R$ 50.001 a R$ 100.000">De R$ 50.001 a R$ 100.000</option>
+                      <option value="Acima de R$ 100.000">Acima de R$ 100.000</option>
+                  </select>
+                </div>
+                
+                {/* ===== ÁREA DE INTERESSE ATUALIZADA ===== */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">ÁREA DE INTERESSE *</label>
                   <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white">
                       <option value="" disabled>Selecione um serviço</option>
-                      <optgroup label="Serviços Gerais">
-                          <option value="Legalização e Regularização">Legalização e Regularização</option>
-                          <option value="Departamento Pessoal">Departamento Pessoal</option>
-                          <option value="Fiscal e Tributário">Fiscal e Tributário</option>
-                          <option value="Contabilidade Geral">Contabilidade Geral</option>
-                          <option value="Gestão Financeira">Gestão Financeira</option>
-                          <option value="Consultoria Estratégica">Consultoria Estratégica</option>
+                      <optgroup label="Serviços para Pessoa Física">
+                        <option value="IRPF para Profissionais da Saúde">IRPF para Profissionais da Saúde</option>
+                        <option value="Carnê-Leão Digital">Carnê-Leão Digital</option>
+                        <option value="Receita Saúde">Receita Saúde</option>
+                        <option value="Consultoria Previdenciária (INSS)">Consultoria Previdenciária (INSS)</option>
+                        <option value="Planejamento para migrar de PF para PJ">Planejamento para migrar de PF para PJ</option>
+                        <option value="Revisão e Retificação">Revisão e Retificação</option>
                       </optgroup>
-                      <optgroup label="Serviços para Área da Saúde">
-                          <option value="Abertura de PJ Médica">Abertura de PJ Médica</option>
-                          <option value="Planejamento Tributário Médico">Planejamento Tributário Médico</option>
-                          <option value="Gestão Fiscal e Contábil Médica">Gestão Fiscal e Contábil Médica</option>
-                          <option value="DMED e Carnê-Leão">DMED e Carnê-Leão</option>
-                          <option value="BPO Financeiro para Clínicas">BPO Financeiro para Clínicas</option>
-                          <option value="Holding Patrimonial para Médicos">Holding Patrimonial para Médicos</option>
+                      <optgroup label="Serviços para Pessoa Jurídica">
+                        <option value="Abertura de Empresa">Abertura de Empresa</option>
+                        <option value="Planejamento Tributário">Planejamento Tributário</option>
+                        <option value="Gestão Fiscal e Contábil">Gestão Fiscal e Contábil</option>
+                        <option value="BPO Financeiro">BPO Financeiro</option>
+                        <option value="Gestão de Equipe e eSocial">Gestão de Equipe e eSocial</option>
+                        <option value="DMED">DMED</option>
+                        <option value="Consultoria Estratégica para Clínicas">Consultoria Estratégica para Clínicas</option>
                       </optgroup>
                       <option value="Outros">Outros</option>
                   </select>
                 </div>
+                {/* ===== FIM DA ATUALIZAÇÃO ===== */}
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-3 tracking-wide">DESCRIÇÃO DA NECESSIDADE *</label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="Descreva brevemente sua necessidade contábil..."></textarea>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} className="w-full px-4 py-4 border border-slate-200 rounded-sm focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all duration-300 bg-white" placeholder="Descreva brevemente sua necessidade..."></textarea>
                 </div>
                 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-sm font-medium transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === 'sending' && <span>Enviando...</span>}
                   {status === 'idle' && <><Send className="w-5 h-5" /><span>ENVIAR SOLICITAÇÃO</span></>}
