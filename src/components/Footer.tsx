@@ -41,7 +41,7 @@ const Footer = () => {
               {/* ===== FIM DA ALTERAÇÃO ===== */}
               <div>
                 <span className="text-xl font-light tracking-wide">EVERTON SOUSA</span>
-                <div className="text-xs font-medium tracking-[0.28em] uppercase text-white/70">
+                <div className="text-xs font-medium tracking-[0.52em] uppercase text-white/70">
                   CONTABILIDADE
                 </div>
               </div>
