@@ -52,10 +52,10 @@ const Header = () => {
             </div>
             <div>
               <span className={`text-xl font-light tracking-wide transition-colors duration-300 ${isLightBg ? 'text-slate-900' : 'text-white'}`}>
-                CONTADOR
+                EVERTON SOUSA
               </span>
               <div className={`text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${isLightBg ? 'text-slate-600' : 'text-white/80'}`}>
-                EVERTON SOUSA
+                CONTABILIDADE
               </div>
             </div>
           </Link>
