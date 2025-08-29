@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, MapPin, Phone, Mail, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUp } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -29,13 +29,13 @@ const Footer = () => {
       </button>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12">
-        {/* ===== GRID DO RODAPÉ ATUALIZADO PARA 5 COLUNAS ===== */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
           {/* Company Info (ocupa 2 colunas) */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-4 mb-8">
-              <div className="bg-white/10 p-3 rounded-sm">
-                <Calculator className="w-8 h-8 text-white" />
+              {/* Ícone da calculadora trocado pelo seu logo */}
+              <div className="bg-white/10 p-2 rounded-sm flex items-center justify-center">
+                <img src="/logo.png" alt="Logo Everton Sousa Contador" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <span className="text-xl font-light tracking-wide">CONTADOR</span>
@@ -127,7 +127,23 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-12">
-          {/* ... (código do bottom bar continua o mesmo) ... */}
+          <div className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="text-center lg:text-left mb-6 lg:mb-0">
+              <p className="text-white/50 text-sm mb-2">
+                © 2025 Contador Everton Sousa. Todos os direitos reservados.
+              </p>
+              <p className="text-white/40 text-xs">
+                CRC/PB 013847/O-6 | CNPJ: 12.345.678/0001-90
+              </p>
+            </div>
+            
+            <div className="text-center lg:text-right">
+              <p className="text-white/40 text-xs leading-relaxed max-w-md">
+                Este site está em conformidade com a LGPD e as diretrizes do CFC. 
+                Todas as informações são tratadas com absoluta confidencialidade.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
