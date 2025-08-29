@@ -9,9 +9,6 @@ const Team = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         <div className="text-center mb-12"> {/* Reduzido de mb-20 para mb-12, ou pode ser removido dependendo do espaço desejado */}
-          <span className="text-sm font-medium tracking-[0.2em] text-slate-500 uppercase">
-            LIDERANÇA CONTÁBIL
-          </span>
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mt-4 mb-8 leading-tight">
             Fundador
           </h2>
