@@ -26,9 +26,6 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           
-          {/* 1. Badge "EXCELÊNCIA CONTÁBIL" foi removido daqui */}
-
-          {/* 2. Título principal alterado */}
           <h1 className="text-5xl lg:text-7xl font-light text-white mb-8 leading-tight tracking-tight">
             CONTABILIDADE
             <span className="block font-normal text-4xl lg:text-6xl text-white/90 mt-2">
@@ -36,18 +33,17 @@ const Hero = () => {
             </span>
           </h1>
           
-          {/* 3. Parágrafo de descrição alterado */}
           <p className="text-xl lg:text-2xl text-white/70 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-            Soluções contábeis personalizadas para sua clínica ou consultório, com foco na economia e segurança do seu negócio.
+            Soluções contábeis para médicos, dentistas, consultórios, clínicas e profissionais da saúde, com atendimento personalizado focado na redução legal de impostos, economia e segurança para o seu negócio.
           </p>
           
-          {/* 4. Botões invertidos e textos/estilos alterados */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-green-500 text-white px-10 py-4 rounded-sm font-medium text-lg transition-all duration-300 hover:bg-green-600 flex items-center justify-center space-x-3"
+              // AQUI ESTÁ A ALTERAÇÃO: trocado 'rounded-sm' por 'rounded-full'
+              className="group bg-green-500 text-white px-10 py-4 rounded-full font-medium text-lg transition-all duration-300 hover:bg-green-600 flex items-center justify-center space-x-3"
             >
               <FaWhatsapp className="w-5 h-5" />
               <span>Atendimento via WhatsApp</span>
