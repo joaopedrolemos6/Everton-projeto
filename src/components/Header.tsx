@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react'; // Ícone da Calculadora removido
+import { Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -29,7 +29,6 @@ const Header = () => {
   
   const isLightBg = isScrolled || location.pathname !== '/';
 
-  // Navegação simplificada
   const navLinks = [
     { label: 'SERVIÇOS', id: 'services' },
     { label: 'EQUIPE', id: 'team' },
@@ -46,10 +45,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-6">
           
           <Link to="/" className="flex items-center space-x-4 cursor-pointer">
-            {/* Ícone da calculadora trocado pelo seu logo */}
-            <div className={`p-2 rounded-lg transition-all duration-300 ${isLightBg ? 'bg-slate-900' : 'bg-white/10 backdrop-blur-sm'}`}>
-              <img src="/logo.png" alt="Logo Everton Sousa Contador" className="w-8 h-8 object-contain" />
+            {/* ===== ALTERAÇÃO AQUI: REMOVENDO O EFEITO DE FUNDO DO LOGO ===== */}
+            <div className="w-12 h-12 flex items-center justify-center"> {/* Ajusta o container para o logo */}
+              <img src="/logo.png" alt="Logo Everton Sousa Contador" className="h-full w-auto object-contain" /> {/* Garante que o logo ocupe o espaço */}
             </div>
+            {/* ===== FIM DA ALTERAÇÃO ===== */}
             <div>
               <span className={`text-xl font-light tracking-wide transition-colors duration-300 ${isLightBg ? 'text-slate-900' : 'text-white'}`}>
                 EVERTON SOUSA
