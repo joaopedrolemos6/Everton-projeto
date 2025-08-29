@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calculator } from 'lucide-react';
+import { Menu, X } from 'lucide-react'; // Ícone da Calculadora removido
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const { isAuthenticated } = useAuth();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -31,9 +29,10 @@ const Header = () => {
   
   const isLightBg = isScrolled || location.pathname !== '/';
 
-  // O link "EMPRESA" foi removido deste array
+  // Navegação simplificada
   const navLinks = [
     { label: 'SERVIÇOS', id: 'services' },
+    { label: 'EQUIPE', id: 'team' },
     { label: 'CONTATO', id: 'contact' }
   ];
 
@@ -47,8 +46,9 @@ const Header = () => {
         <div className="flex justify-between items-center py-6">
           
           <Link to="/" className="flex items-center space-x-4 cursor-pointer">
+            {/* Ícone da calculadora trocado pelo seu logo */}
             <div className={`p-2 rounded-lg transition-all duration-300 ${isLightBg ? 'bg-slate-900' : 'bg-white/10 backdrop-blur-sm'}`}>
-              <Calculator className={`w-8 h-8 transition-colors duration-300 ${isLightBg ? 'text-white' : 'text-white'}`} />
+              <img src="/logo.png" alt="Logo Everton Sousa Contador" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <span className={`text-xl font-light tracking-wide transition-colors duration-300 ${isLightBg ? 'text-slate-900' : 'text-white'}`}>
