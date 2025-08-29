@@ -119,8 +119,7 @@ const Contact = () => {
             <span className="block font-normal">Especializada</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Entre em contato para uma consultoria confidencial e personalizada. 
-            Atendemos exclusivamente mediante agendamento prévio.
+            Entre em contato para uma consultoria personalizada.
           </p>
         </div>
 
