@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-8">
               {/* ===== ÍCONE ALTERADO AQUI ===== */}
               {/* Classes de fundo e padding removidas para um visual limpo */}
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-16 h-16 flex items-center justify-center">
                 <img src="/logo.png" alt="Logo Everton Sousa Contabilidade" className="h-full w-auto object-contain" />
               </div>
               {/* ===== FIM DA ALTERAÇÃO ===== */}
