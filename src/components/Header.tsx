@@ -31,7 +31,6 @@ const Header = () => {
 
   const navLinks = [
     { label: 'SERVIÇOS', id: 'services' },
-    { label: 'EQUIPE', id: 'team' },
     { label: 'CONTATO', id: 'contact' }
   ];
 
@@ -45,16 +44,15 @@ const Header = () => {
         <div className="flex justify-between items-center py-6">
           
           <Link to="/" className="flex items-center space-x-4 cursor-pointer">
-            {/* ===== ALTERAÇÃO AQUI: REMOVENDO O EFEITO DE FUNDO DO LOGO ===== */}
-            <div className="w-12 h-12 flex items-center justify-center"> {/* Ajusta o container para o logo */}
-              <img src="/logo.png" alt="Logo Everton Sousa Contador" className="h-full w-auto object-contain" /> {/* Garante que o logo ocupe o espaço */}
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img src="/logo.png" alt="Logo Everton Sousa Contabilidade" className="h-full w-auto object-contain" />
             </div>
-            {/* ===== FIM DA ALTERAÇÃO ===== */}
             <div>
               <span className={`text-xl font-light tracking-wide transition-colors duration-300 ${isLightBg ? 'text-slate-900' : 'text-white'}`}>
                 EVERTON SOUSA
               </span>
-              <div className={`text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${isLightBg ? 'text-slate-600' : 'text-white/80'}`}>
+              {/* ===== VALOR DO TRACKING AUMENTADO AQUI ===== */}
+              <div className={`text-xs font-medium tracking-[0.52em] uppercase transition-colors duration-300 ${isLightBg ? 'text-slate-600' : 'text-white/80'}`}>
                 CONTABILIDADE
               </div>
             </div>
